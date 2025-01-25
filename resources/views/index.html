@@ -5,16 +5,26 @@
     <title>Mikael Endale Portfolio</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link href="style.css" rel="stylesheet" />
-    <script>
-      if (
-        localStorage.getItem("dark-mode") === "false" ||
-        !("dark-mode" in localStorage)
-      ) {
-        document.querySelector("html").classList.remove("dark");
-      } else {
-        document.querySelector("html").classList.add("dark");
-      }
-    </script>
+   <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const darkMode = localStorage.getItem("dark-mode") === "true";
+    const signatureLight = document.querySelector(".signature-light");
+    const signatureDark = document.querySelector(".signature-dark");
+
+    // Initially hide both images
+    signatureLight.style.display = "none";
+    signatureDark.style.display = "none";
+
+    // Check if dark mode is enabled and toggle the signatures
+    if (darkMode || localStorage.getItem("dark-mode") === "true") {
+      document.querySelector("html").classList.add("dark");
+      signatureDark.style.display = "block"; // Show dark signature
+    } else {
+      document.querySelector("html").classList.remove("dark");
+      signatureLight.style.display = "block"; // Show light signature
+    }
+  });
+</script>
   </head>
 
   <body class="crok3 cd5fh c0n2d ca1ms ciyl2 cmwzp c7v7z">
@@ -83,7 +93,7 @@
                       Mikael Endale
                     </h1>
                     <p class="cl9w0 cjnk1 cu98r">
-                      Fullstack developer and Founder of Lalodev
+                      Fullstack developer, <b>Tech Entrepreneur</b> and Founder.
                     </p>
                   </div>
                   <a
@@ -307,7 +317,7 @@
                             <strong style="background-color: yellow"
                               >250,000 ETB</strong
                             >
-                            per round, and currently January 2025 I started the
+                            as of now, and currently January 2025 I started the
                             3rd round.
                           </p>
                         </div>
@@ -418,11 +428,11 @@
                           </p>
                         </div>
                       </div>
-                    </article> 
+                    </article>
                   </div>
-                </section> 
+                </section>
 
-                <!-- Articles -->
+                <!-- Projects -->
                 <section>
                   <h2 class="cragt ckx3g cuykd c045m ca1ms c7v7z">Projects</h2>
                   <div class="ce075">
@@ -446,17 +456,28 @@
                         </svg>
                       </div>
                       <div class="czq8f cxrkr">
-                        <div class="cp78t ckgk8 cjnk1 cu98r">medium.com</div>
+                        <div
+                          style="color: green; font-weight: 600"
+                          class="cp78t ckgk8 cjnk1 cu98r"
+                        >
+                          #Done
+                        </div>
                         <h3 class="c045m ca1ms c7v7z">
-                          <a class="c5v5y c57ju" href="#0"
-                            >KumoX Images Now available On Docker Hub</a
+                          <a
+                            class="c5v5y c57ju"
+                            href="https://lalodev.com"
+                            target="_blank"
+                            >Lalo Dev Landing Page & Developer Page</a
                           >
                         </h3>
                       </div>
                       <p class="cl9w0 cjnk1 cu98r">
-                        Today, KumoX announced that it has become a DVP, marking
-                        a significant milestone for our shared mission to
-                        enhance the security.
+                        The Lalo Dev Landing Page introduces visitors to the
+                        platform with a clean, user-friendly design, featuring
+                        key offerings and clear calls to action. The Developer
+                        Page showcases the technical side of Lalo Dev,
+                        highlighting the tech stack, development process, and
+                        projects.
                       </p>
                     </article>
                     <!-- Post #2 -->
@@ -479,17 +500,25 @@
                         </svg>
                       </div>
                       <div class="czq8f cxrkr">
-                        <div class="cp78t ckgk8 cjnk1 cu98r">medium.com</div>
+                        <div
+                          style="color: green; font-weight: 600"
+                          class="cp78t ckgk8 cjnk1 cu98r"
+                        >
+                          #Done
+                        </div>
                         <h3 class="c045m ca1ms c7v7z">
-                          <a class="c5v5y c57ju" href="#0"
-                            >Nobody Wants To Work with Josh</a
+                          <a class="c5v5y c57ju"
+                            >Domain Management System | Lalo Dev</a
                           >
                         </h3>
                       </div>
                       <p class="cl9w0 cjnk1 cu98r">
-                        There was a wizard engineer (we'll call him “Josh”) who
-                        worked for me a few years ago. His code was good. His
-                        PRs were quick.
+                        The Domain Management System at Lalo Dev helps manage
+                        everything under the platform, from Learning Hub and
+                        blog pages to community spaces and course materials. It
+                        makes it easy to update, organize, and keep everything
+                        running smoothly across the site, ensuring a great
+                        experience for both users and admins.
                       </p>
                     </article>
                     <!-- Post #3 -->
@@ -512,73 +541,28 @@
                         </svg>
                       </div>
                       <div class="czq8f cxrkr">
-                        <div class="cp78t ckgk8 cjnk1 cu98r">
-                          indiehackers.com
+                        <div
+                          style="color: green; font-weight: 600"
+                          class="cp78t ckgk8 cjnk1 cu98r"
+                        >
+                          #Done
                         </div>
                         <h3 class="c045m ca1ms c7v7z">
                           <a class="c5v5y c57ju" href="#0"
-                            >A Sharp And Solid Outline Of 3D Grid Magic</a
+                            >Lalo Dev Learning Hub</a
                           >
                         </h3>
                       </div>
                       <p class="cl9w0 cjnk1 cu98r">
-                        Since the world is 3D, it's no surprise that video
-                        games, mobile robotics challenges, and architectural
-                        design tools often require 3D variants.
+                        The Lalo Dev Learning Hub offers a range of courses and
+                        resources to help users upskill. Now in its 3rd round
+                        Jan 25/2025, the platform has already generated over
+                        <strong style="background-color: yellow"
+                          >250,000 ETB</strong
+                        >
+                        as of now , making a positive impact on learners and the
+                        community.
                       </p>
-                    </article>
-                  </div>
-                </section>
-
-                <!-- Side Hustles -->
-                <section>
-                  <h2 class="cragt ckx3g cuykd c045m ca1ms c7v7z">
-                    Side Hustles
-                  </h2>
-                  <div class="c1hft c37m1 cbi4k">
-                    <!-- Post #1 -->
-                    <article
-                      class="cu81w c752s c1q7e ceoke ciqjs czmrt cdgze cqd2s citpx cjmwz"
-                    >
-                      <div
-                        class="ciobu cl22f c5zah cn1lv c88aw c4s0r cn899 caf15 c62sf"
-                        aria-hidden="true"
-                      >
-                        <svg
-                          class="csx92 cfsq7 cotl8"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="10"
-                          height="10"
-                        >
-                          <path
-                            d="M1.018 10 0 8.983l7.572-7.575H1.723L1.736 0H10v8.266H8.577l.013-5.841L1.018 10Z"
-                          ></path>
-                        </svg>
-                      </div>
-                      <div
-                        class="ca3bq coily cj7hi c72v2 c8xr8 c2276 czi0k cw9ok cun1p cmlqw csjzu cf4er chc5d"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
-                        >
-                          <path
-                            fill="#FF6E1C"
-                            fill-rule="evenodd"
-                            d="M6.857 0C5.73 0 4.647.448 3.85 1.246L0 5.096v1.761C0 8.102.535 9.222 1.387 10A4.243 4.243 0 0 0 0 13.143v1.762l3.85 3.85a4.254 4.254 0 0 0 6.15-.142 4.254 4.254 0 0 0 6.15.141l3.85-3.85v-1.761A4.243 4.243 0 0 0 18.613 10 4.243 4.243 0 0 0 20 6.857V5.095l-3.85-3.85a4.254 4.254 0 0 0-6.15.142A4.243 4.243 0 0 0 6.857 0Zm6.022 10a4.314 4.314 0 0 1-.14-.135L10 7.127 7.262 9.865A4.264 4.264 0 0 1 7.12 10c.048.044.095.089.14.135L10 12.873l2.738-2.738c.046-.046.094-.091.141-.135Zm-1.768 4.905v.841a2.032 2.032 0 0 0 3.468 1.437l3.199-3.199v-.841a2.032 2.032 0 0 0-3.468-1.437l-3.199 3.199Zm-2.222 0L5.69 11.706a2.032 2.032 0 0 0-3.468 1.437v.841l3.199 3.199a2.032 2.032 0 0 0 3.468-1.437v-.841Zm0-10.651v.841L5.69 8.294a2.032 2.032 0 0 1-3.468-1.437v-.841l3.199-3.199a2.032 2.032 0 0 1 3.468 1.437Zm5.42 4.04-3.198-3.199v-.841a2.032 2.032 0 0 1 3.468-1.437l3.199 3.199v.841a2.032 2.032 0 0 1-3.468 1.437Z"
-                          ></path>
-                        </svg>
-                      </div>
-                      <div class="ce075">
-                        <h3 class="c045m ca1ms c7v7z">
-                          <a class="c5v5y c57ju" href="#0">Tail Library</a>
-                        </h3>
-                        <p class="cl9w0 cjnk1 cu98r">
-                          An easy-to-use components library based on Tailwind
-                          CSS.
-                        </p>
-                      </div>
                     </article>
                     <!-- Post #2 -->
                     <article
@@ -599,288 +583,272 @@
                           ></path>
                         </svg>
                       </div>
+                      <div class="czq8f cxrkr">
+                        <div
+                          style="color: rgb(175, 175, 71); font-weight: 600"
+                          class="cp78t ckgk8 cjnk1 cu98r"
+                        >
+                          #ongoing
+                        </div>
+                        <h3 class="c045m ca1ms c7v7z">
+                          <a class="c5v5y c57ju">StudMind</a>
+                        </h3>
+                      </div>
+                      <p class="cl9w0 cjnk1 cu98r">
+                        StudMind is an ongoing SaaS project focused on using AI
+                        to enhance the study experience. It leverages artificial
+                        intelligence to provide personalized learning paths,
+                        study materials, and smart tools to help students study
+                        more effectively and efficiently.
+                      </p>
+                    </article>
+                    <!-- Post #3 -->
+                    <article
+                      class="cu81w c752s c1q7e ceoke ciqjs czmrt cdgze cqd2s citpx cjmwz"
+                    >
                       <div
-                        class="ca3bq coily cj7hi c72v2 c8xr8 c2276 czi0k cw9ok cun1p cmlqw csjzu cf4er chc5d"
+                        class="ciobu cl22f c5zah cn1lv c88aw c4s0r cn899 caf15 c62sf"
+                        aria-hidden="true"
                       >
                         <svg
+                          class="csx92 cfsq7 cotl8"
                           xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
+                          width="10"
+                          height="10"
                         >
                           <path
-                            fill="#17CF97"
-                            d="M4.998 10a5 5 0 1 0-5-5v5h5Zm10 0a5 5 0 1 0 5 5v-5h-5Z"
-                          ></path>
-                          <path
-                            fill="#0D9F73"
-                            d="M14.998 0a5 5 0 1 1-5 5V0h5Zm-10 20a5 5 0 1 1 5-5v5h-5Z"
+                            d="M1.018 10 0 8.983l7.572-7.575H1.723L1.736 0H10v8.266H8.577l.013-5.841L1.018 10Z"
                           ></path>
                         </svg>
                       </div>
+                      <div class="czq8f cxrkr">
+                        <div
+                          style="color: rgb(175, 175, 71); font-weight: 600"
+                          class="cp78t ckgk8 cjnk1 cu98r"
+                        >
+                          #ongoing
+                        </div>
+                        <h3 class="c045m ca1ms c7v7z">
+                          <a class="c5v5y c57ju" href="#0">Quantum Chat</a>
+                        </h3>
+                      </div>
+                      <p class="cl9w0 cjnk1 cu98r">
+                        Quantum Chat is an ongoing project using quantum
+                        cryptography to create a super-secure messaging
+                        platform. It’s designed to keep your conversations safe
+                        and private, with extraordinary encryption technology.
+                      </p>
+                    </article>
+                    <!-- Post #2 -->
+                    <article
+                      class="cu81w c752s c1q7e ceoke ciqjs czmrt cdgze cqd2s citpx cjmwz"
+                    >
+                      <div
+                        class="ciobu cl22f c5zah cn1lv c88aw c4s0r cn899 caf15 c62sf"
+                        aria-hidden="true"
+                      >
+                        <svg
+                          class="csx92 cfsq7 cotl8"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="10"
+                          height="10"
+                        >
+                          <path
+                            d="M1.018 10 0 8.983l7.572-7.575H1.723L1.736 0H10v8.266H8.577l.013-5.841L1.018 10Z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div class="czq8f cxrkr">
+                        <div
+                          style="color: rgb(175, 175, 71); font-weight: 600"
+                          class="cp78t ckgk8 cjnk1 cu98r"
+                        >
+                          #ongoing
+                        </div>
+                        <h3 class="c045m ca1ms c7v7z">
+                          <a class="c5v5y c57ju">Smart Payment Integration</a>
+                        </h3>
+                      </div>
+                      <p class="cl9w0 cjnk1 cu98r">
+                        Smart Payment Integration is a secret project that uses
+                        quantum encryption to ensure secure and private
+                        transactions. It’s designed to provide a highly secure,
+                        seamless payment experience, prioritizing privacy and
+                        data protection.
+                      </p>
+                    </article>
+                    <!-- Post #3 -->
+                    <article
+                      class="cu81w c752s c1q7e ceoke ciqjs czmrt cdgze cqd2s citpx cjmwz"
+                    >
+                      <div
+                        class="ciobu cl22f c5zah cn1lv c88aw c4s0r cn899 caf15 c62sf"
+                        aria-hidden="true"
+                      >
+                        <svg
+                          class="csx92 cfsq7 cotl8"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="10"
+                          height="10"
+                        >
+                          <path
+                            d="M1.018 10 0 8.983l7.572-7.575H1.723L1.736 0H10v8.266H8.577l.013-5.841L1.018 10Z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div class="czq8f cxrkr">
+                        <div
+                          style="color: rgb(175, 175, 71); font-weight: 600"
+                          class="cp78t ckgk8 cjnk1 cu98r"
+                        >
+                          #ongoing
+                        </div>
+                        <h3 class="c045m ca1ms c7v7z">
+                          <a class="c5v5y c57ju" href="#0"
+                            >ERP School Management System</a
+                          >
+                        </h3>
+                      </div>
+                      <p class="cl9w0 cjnk1 cu98r">
+                        The ERP School Management System is an ongoing project
+                        built by a dedicated team, designed to streamline school
+                        operations. It covers everything from student records
+                        and grades to class schedules, making school management
+                        more efficient and organized.
+                      </p>
+                    </article>
+                  </div>
+                </section>
+
+                <!-- Side Hustles -->
+                <section>
+                  <h2 class="cragt ckx3g cuykd c045m ca1ms c7v7z">
+                    Side Hustles
+                  </h2>
+                  <div class="c1hft c37m1 cbi4k">
+                    <!-- Post #1 -->
+                    <article
+                      class="cu81w c752s c1q7e ceoke ciqjs czmrt cdgze cqd2s citpx cjmwz"
+                    >
+                      <div
+                        class="ciobu cl22f c5zah cn1lv c88aw c4s0r cn899 caf15 c62sf"
+                        aria-hidden="true"
+                      ></div>
+                      <div
+                        class="ca3bq coily cj7hi c72v2 c8xr8 c2276 czi0k cw9ok cun1p cmlqw csjzu cf4er chc5d"
+                      >
+                        <img
+                          src="https://cdn0.iconfinder.com/data/icons/business-finance-hexagon/128/14-256.png"
+                          alt=""
+                        />
+                      </div>
                       <div class="ce075">
                         <h3 class="c045m ca1ms c7v7z">
-                          <a class="c5v5y c57ju" href="#0">KumoNext</a>
+                          <a class="c5v5y c57ju" href=""
+                            >Tech Consulting for Startups</a
+                          >
                         </h3>
                         <p class="cl9w0 cjnk1 cu98r">
-                          A free frontend framework based on Tailwind CSS and
-                          Next.js.
+                          Offer consulting services to new businesses or fellow
+                          students looking to build apps, websites, or tech
+                          solutions
+                        </p>
+                      </div>
+                    </article>
+                    <!-- Post #2 -->
+                    <article
+                      class="cu81w c752s c1q7e ceoke ciqjs czmrt cdgze cqd2s citpx cjmwz"
+                    >
+                      <div
+                        class="ciobu cl22f c5zah cn1lv c88aw c4s0r cn899 caf15 c62sf"
+                        aria-hidden="true"
+                      ></div>
+                      <div
+                        class="ca3bq coily cj7hi c72v2 c8xr8 c2276 czi0k cw9ok cun1p cmlqw csjzu cf4er chc5d"
+                      >
+                        <img
+                          src="https://cdn1.iconfinder.com/data/icons/business-700/48/Candle_Sticks-512.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="ce075">
+                        <h3 class="c045m ca1ms c7v7z">
+                          <a class="c5v5y c57ju" href="">Forex Trading.</a>
+                        </h3>
+                        <p class="cl9w0 cjnk1 cu98r">
+                          I explore the world of FX Trading, where I analyze
+                          currency markets and trade different currency pairs
                         </p>
                       </div>
                     </article>
                   </div>
                 </section>
-
-                <!-- Recommendations -->
                 <section>
-                  <h2 class="cragt ckx3g cuykd c045m ca1ms c7v7z">
-                    Recommendations
+                  <h2
+                    style="color: rgb(172, 165, 125)"
+                    class="cragt ckx3g cuykd c045m ca1ms c7v7z"
+                  >
+                    Education
                   </h2>
-                  <div class="c0wd9 cxf0q cx0hk cefwn">
-                    <div
-                      class="coily c37m1 cbpt3 c0key cnykm cht0w cxnuf"
-                      x-data="testimonialCarousel"
-                      @resize.window.debounce="handleResize"
-                      @transitionend="handleTransitionEnd($event)"
-                      @mouseover="pauseCarousel()"
-                      @mouseout="playCarousel()"
-                      @focusin="$event.currentTarget.contains($event.relatedTarget) || pauseCarousel()"
-                      @focusout="$event.currentTarget.contains($event.relatedTarget) || playCarousel()"
+                  <div class="ce075">
+                    <!-- Post #1 -->
+                    <article
+                      class="c752s c1q7e ceoke ciqjs czmrt cqd2s citpx cjmwz"
                     >
-                      <!-- Post #1 -->
-                      <article
-                        class="cu81w czqxa c9riz c752s c1q7e c5v5y c57ju clbo7 ca0vo crren cq8eh ckmfp crgzn ctm47 ccbti c6gci crcs6 c6k7e cijvc"
-                      >
-                        <div class="ca3bq coily c8xr8 cm208">
-                          <img
-                            class="cj7hi c72v2 c9riz czi0k cev7p"
-                            src="images/testimonial-01.jpg"
-                            width="44"
-                            height="44"
-                            alt="Testimonial 01"
-                          />
-                          <div>
-                            <h3 class="cmqto cl9w0 c045m ca1ms c7v7z">
+                      <div class="cs7fr chiqp">
+                        <div
+                          class="coily cfrxt cw2a0 c9riz c8xr8 c2276 czi0k cw9ok cun1p cmlqw csjzu cf4er chc5d cop7l cebxb"
+                        >
+                          <img src="images/lebawi.png" alt="" />
+                        </div>
+                        <div>
+                          <div class="cxozv cxrkr">
+                            <div class="cp78t c5qvh cplrd">2020 - Today</div>
+                            <h3 class="c045m ca1ms c7v7z">
                               <a class="c0t07 ciyg5 c9n2z csdx0 cg1zu" href="#0"
-                                >Enrico Perry</a
+                                >Highschool Student | Lebawi International
+                                Academy</a
                               >
                             </h3>
-                            <p class="cp78t ckgk8 cplrd">CTO, medium.com</p>
+                            <div
+                              class="text-gray-600dark:text-gray-400 cp78t ckgk8"
+                            >
+                              Ethiopia, Addis Ababa
+                            </div>
                           </div>
+                          <p class="cl9w0 cjnk1 cu98r">
+                            I am currently a Grade 11 Natural Science student at
+                            Lebawi Academy, where I am expanding my knowledge in
+                            science and technology while balancing my passion
+                            for tech projects and side hustles.
+                          </p>
                         </div>
-                        <p
-                          class="before:content-['\201C'] after:content-['\201D'] ckx3g c045m ca1ms cpj3u cxena c7v7z"
-                        >
-                          If there's one investment that's really paid off, it's
-                          hiring a professional developer. I love the results I
-                          get every day.
-                        </p>
-                      </article>
-                      <!-- Post #2 -->
-                      <article
-                        class="cu81w czqxa c9riz c752s c1q7e c5v5y c57ju clbo7 ca0vo crren cq8eh ckmfp crgzn ctm47 ccbti c6gci crcs6 c6k7e cijvc"
-                      >
-                        <div class="ca3bq coily c8xr8 cm208">
-                          <img
-                            class="cj7hi c72v2 c9riz czi0k cev7p"
-                            src="images/testimonial-02.jpg"
-                            width="44"
-                            height="44"
-                            alt="Testimonial 02"
-                          />
-                          <div>
-                            <h3 class="cmqto cl9w0 c045m ca1ms c7v7z">
-                              <a class="c0t07 ciyg5 c9n2z csdx0 cg1zu" href="#0"
-                                >Marta Lower</a
-                              >
-                            </h3>
-                            <p class="cp78t ckgk8 cplrd">CTO, Vimeo</p>
-                          </div>
-                        </div>
-                        <p
-                          class="before:content-['\201C'] after:content-['\201D'] ckx3g c045m ca1ms cpj3u cxena c7v7z"
-                        >
-                          Thanks to Jordan, we were able to start our company in
-                          a matter of weeks. We have never been happier working
-                          with a freelancer.
-                        </p>
-                      </article>
-                      <!-- Post #3 -->
-                      <article
-                        class="cu81w czqxa c9riz c752s c1q7e c5v5y c57ju clbo7 ca0vo crren cq8eh ckmfp crgzn ctm47 ccbti c6gci crcs6 c6k7e cijvc"
-                      >
-                        <div class="ca3bq coily c8xr8 cm208">
-                          <img
-                            class="cj7hi c72v2 c9riz czi0k cev7p"
-                            src="images/testimonial-03.jpg"
-                            width="44"
-                            height="44"
-                            alt="Testimonial 03"
-                          />
-                          <div>
-                            <h3 class="cmqto cl9w0 c045m ca1ms c7v7z">
-                              <a class="c0t07 ciyg5 c9n2z csdx0 cg1zu" href="#0"
-                                >John Kusac</a
-                              >
-                            </h3>
-                            <p class="cp78t ckgk8 cplrd">CEO, mailchimp.com</p>
-                          </div>
-                        </div>
-                        <p
-                          class="before:content-['\201C'] after:content-['\201D'] ckx3g c045m ca1ms cpj3u cxena c7v7z"
-                        >
-                          If there's one investment that's really paid off, it's
-                          hiring a professional developer. I love the results I
-                          get every day.
-                        </p>
-                      </article>
-                      <!-- Post #4 -->
-                      <article
-                        class="cu81w czqxa c9riz c752s c1q7e c5v5y c57ju clbo7 ca0vo crren cq8eh ckmfp crgzn ctm47 ccbti c6gci crcs6 c6k7e cijvc"
-                      >
-                        <div class="ca3bq coily c8xr8 cm208">
-                          <img
-                            class="cj7hi c72v2 c9riz czi0k cev7p"
-                            src="images/testimonial-04.jpg"
-                            width="44"
-                            height="44"
-                            alt="Testimonial 04"
-                          />
-                          <div>
-                            <h3 class="cmqto cl9w0 c045m ca1ms c7v7z">
-                              <a class="c0t07 ciyg5 c9n2z csdx0 cg1zu" href="#0"
-                                >Lara Springfield</a
-                              >
-                            </h3>
-                            <p class="cp78t ckgk8 cplrd">CTO, IndieHackers</p>
-                          </div>
-                        </div>
-                        <p
-                          class="before:content-['\201C'] after:content-['\201D'] ckx3g c045m ca1ms cpj3u cxena c7v7z"
-                        >
-                          Thanks to Jordan, we were able to start our company in
-                          a matter of weeks. We have never been happier working
-                          with a freelancer.
-                        </p>
-                      </article>
-                    </div>
-                    <!-- Carousel functionality: https://github.com/alpinejs/alpine -->
-                    <script>
-                      document.addEventListener("alpine:init", () => {
-                        Alpine.data("testimonialCarousel", () => ({
-                          duration: 3000,
-                          intervalId: null,
-                          articleWidth: 0,
-                          gap: 0,
-                          init() {
-                            this.handleResize();
-                            this.prependLastChild();
-                            this.removeTransitionTemporarily();
-                            this.translateContainer(
-                              -this.articleWidth - this.gap
-                            );
-                            this.playCarousel();
-                            this.setActiveState();
-                          },
-                          handleResize() {
-                            this.articleWidth =
-                              this.$el.children[0].offsetWidth;
-                            this.gap = parseFloat(
-                              getComputedStyle(this.$el).getPropertyValue("gap")
-                            );
-                          },
-                          prependLastChild() {
-                            this.$el.prepend(this.$el.lastElementChild);
-                          },
-                          translateContainer(value) {
-                            this.$el.style.transform = `translateX(${value}px)`;
-                          },
-                          removeTransitionTemporarily() {
-                            this.$el.style.transition = "none";
-                            setTimeout(() => {
-                              this.$el.style.transition = "";
-                            }, 0);
-                          },
-                          startCarousel() {
-                            return setInterval(() => {
-                              this.translateContainer(
-                                -2 * (this.articleWidth + this.gap)
-                              );
-                            }, this.duration);
-                          },
-                          handleTransitionEnd(event) {
-                            if (event.propertyName !== "transform") return;
-                            this.$el.appendChild(this.$el.firstElementChild);
-                            this.removeTransitionTemporarily();
-                            this.translateContainer(
-                              -this.articleWidth - this.gap
-                            );
-                            this.setActiveState();
-                          },
-                          playCarousel() {
-                            this.intervalId = this.startCarousel();
-                          },
-                          pauseCarousel() {
-                            clearInterval(this.intervalId);
-                          },
-                          setActiveState() {
-                            Array.from(this.$el.children).forEach(
-                              (child, index) => {
-                                child.setAttribute(
-                                  "data-state",
-                                  index === 1 ? "active" : "inactive"
-                                );
-                              }
-                            );
-                          },
-                        }));
-                      });
-                    </script>
-                  </div>
-                </section>
-
-                <!-- Newsletter -->
-                <section>
-                  <h2 class="cragt ckx3g cuykd c045m ca1ms c7v7z">
-                    Let's Connect
-                  </h2>
-                  <div class="c752s cgvqk ci9im c69po c1q7e cvx4u czakf cwq9q">
-                    <form>
-                      <div
-                        class="coily cwap5 cmlqw c090i c6x7o c1djd c2yrc criup"
-                      >
-                        <input
-                          class="c73qh csmwk cwnk2 cl9w0 ca1ms cn272 c3ibl chn51 c7v7z ca7ob"
-                          type="email"
-                          name="email"
-                          aria-label="Enter your email to subscribe my newsletter"
-                          placeholder="Enter your email..."
-                          autocomplete="off"
-                        />
-                        <button
-                          class="c8j31 cu81w cqzhu c8uww ctphr c1m9b cdvd9 c5v5y c57ju ca0vo cz4g8 ceq97 c3ew3 cb1r6 cel1w cyamd cjf4f cvr54 cha6o cht5m c6x6e c7vou"
-                        >
-                          Join Newsletter
-                        </button>
                       </div>
-                    </form>
+                    </article>
                   </div>
                 </section>
+                <h1 style="text-align: center" class="cl9w0 cjnk1 cu98r">
+                  "Building the future, one innovation at a time." <br />
+                  <span style="text-align: end">me 😁</span>
+                </h1>
               </main>
-
               <!-- Footer -->
               <footer class="c4p6t ck1og cpi2s">
                 <!-- Initials logo -->
                 <div>
-                  <svg
-                    class="cyj82 cal0l cfs63"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="201"
-                    height="93"
-                  >
-                    <path
-                      d="M91.06.072c2.113 0 3.969.544 5.569 1.632 1.6 1.024 2.4 2.4 2.4 4.128 0 1.19-.213 2.38-.638 3.57a62.948 62.948 0 0 1 7.158-2.802c5.184-1.728 10.304-2.592 15.36-2.592.512.192 1.152.448 1.92.768.832.256 1.888.864 3.168 1.824 1.344.896 2.016 1.728 2.016 2.496s-.16 1.344-.48 1.728c-4.928 4.48-10.464 9.888-16.608 16.224-6.08 6.336-10.752 11.616-14.016 15.84l-6.912 9.024c-.384.576-.576 1.024-.576 1.344v.096l1.536-.768c.128-.064.224-.128.288-.192 23.36-16.448 39.008-28.096 46.944-34.944a.912.912 0 0 1 .768-.384c.32 0 .544.096.672.288.128.192.736.8 1.824 1.824 1.088.96 1.632 1.696 1.632 2.208 0 .448-.192.832-.576 1.152-6.336 6.016-12.8 13.568-19.392 22.656-6.592 9.088-9.888 16.096-9.888 21.024 0 .576.288.864.864.864 1.28 0 4.288-1.728 9.024-5.184 4.736-3.456 10.112-7.84 16.128-13.152 6.08-5.312 12.48-11.808 19.2-19.488 6.784-7.744 12.32-15.264 16.608-22.56a71.66 71.66 0 0 0 1.344-2.976c.32-.832.8-1.248 1.44-1.248.704 0 1.408.96 2.112 2.88.768 1.856 1.152 3.488 1.152 4.896 0 2.24-2.56 6.72-7.68 13.44-5.12 6.72-11.104 13.664-17.952 20.832-6.848 7.168-14.112 13.568-21.792 19.2-7.68 5.568-13.728 8.352-18.144 8.352-2.112 0-4.224-.832-6.336-2.496-2.048-1.664-3.072-4.352-3.072-8.064 0-4.608 1.376-9.344 4.128-14.208a24.086 24.086 0 0 1 3.936-5.184l2.208-2.592.384-.768v-.096c0-.128-.032-.192-.096-.192-.192 0-.48.192-.864.576-14.272 12.544-23.936 20.896-28.992 25.056-5.056 4.096-8.032 6.144-8.928 6.144-.896 0-1.632-.448-2.208-1.344a11.69 11.69 0 0 0-.864-.96c-.256-.384-.448-.64-.576-.768a3.146 3.146 0 0 0-.384-.48 2.86 2.86 0 0 0-.288-.384c-.064-.32-.096-.8-.096-1.44 0-.64.224-1.568.672-2.784.448-1.216.864-2.368 1.248-3.456.448-1.152 1.664-3.52 3.648-7.104 1.984-3.648 4.352-7.296 7.104-10.944 2.752-3.712 6.784-8.224 12.096-13.536 5.312-5.312 11.264-10.432 17.856-15.36 1.216-.96 1.824-1.568 1.824-1.824s-.128-.384-.384-.384c-4.8 0-12.8 3.2-24 9.6l-.722.417c-2.646 4.308-6.147 9.737-10.502 16.287-8.128 12.224-15.264 21.888-21.408 28.992-.256.256-1.376 1.504-3.36 3.744a184.301 184.301 0 0 1-5.28 5.76c-1.536 1.664-3.68 3.712-6.432 6.144-2.688 2.432-5.216 4.448-7.584 6.048-2.304 1.664-4.896 3.072-7.776 4.224-2.944 1.216-5.696 1.824-8.256 1.824-4.032 0-6.048-1.408-6.048-4.224 0-3.136 1.888-6.72 5.664-10.752 3.712-3.968 8-7.328 12.864-10.08 4.8-2.752 8.768-4.128 11.904-4.128.384 0 .576.16.576.48 0 .32-.128.576-.384.768-.256.192-1.056.608-2.4 1.248-3.776 1.92-8.544 5.728-14.304 11.424-5.824 5.696-8.736 9.6-8.736 11.712 0 .256.128.384.384.384 2.688 0 8.48-4.736 17.376-14.208C47.7 65.992 55.06 57.64 61.205 50.088A4287.35 4287.35 0 0 0 78.558 29c-2.586 2.12-4.405 4.029-5.457 5.728-.192.576-.48.864-.864.864s-.576-.48-.576-1.44.832-2.656 2.496-5.088c1.664-2.496 4.064-5.152 7.2-7.968 2.852-2.567 5.984-5.007 9.395-7.32 1.91-2.522 3.037-4.178 3.38-4.968.577-.768.865-1.312.865-1.632 0-.384-.16-.576-.48-.576-4.096 0-8.992 1.632-14.688 4.896A88.464 88.464 0 0 0 64.277 22.92c-4.672 4.288-8.672 8.576-12 12.864-3.328 4.224-4.992 7.328-4.992 9.312 0 .256.096.384.288.384 2.048 0 9.216-5.184 21.504-15.552 1.216-1.28 1.984-1.92 2.304-1.92.32 0 .48.128.48.384 0 .192-.416.896-1.248 2.112C60.5 45.16 52.597 52.488 46.9 52.488c-2.048 0-3.68-.832-4.896-2.496-1.152-1.728-1.728-4-1.728-6.816 0-2.88 1.472-6.752 4.416-11.616 3.008-4.864 6.816-9.632 11.424-14.304 4.608-4.672 10.08-8.704 16.416-12.096C78.933 1.768 85.109.072 91.06.072Zm95.063 41.76-10.848-.192c-1.088 0-1.696.064-1.824.192l-.96 5.472c0 .64.064 1.056.192 1.248.128.128.384.192.768.192.448 0 .928-.096 1.44-.288 2.368.064 10.304.224 23.808.48 1.344-.32 2.016-1.248 2.016-2.784 0-.64-.256-1.28-.768-1.92-1.024-1.984-2.432-2.976-4.224-2.976-.448 0-.896.096-1.344.288-2.688.192-5.44.288-8.256.288Zm-171.716 0L3.559 41.64c-1.088 0-1.696.064-1.824.192l-.96 5.472c0 .64.064 1.056.192 1.248.128.128.384.192.768.192.448 0 .928-.096 1.44-.288 2.368.064 10.304.224 23.808.48 1.344-.32 2.016-1.248 2.016-2.784 0-.64-.256-1.28-.768-1.92-1.024-1.984-2.432-2.976-4.224-2.976-.448 0-.896.096-1.344.288-2.688.192-5.44.288-8.256.288Z"
-                    ></path>
-                  </svg>
+                  <!-- Light Mode Signature -->
+                  <img
+                    src="images/signature.png"
+                    class="cyj82 cal0l cfs63 signature-light"
+                    alt=""
+                  />
+
+                  <!-- Dark Mode Signature -->
+                  <img
+                    src="images/signature_white.png"
+                    class="cyj82 cal0l cfs63 signature-dark"
+                    alt=""
+                  />
                 </div>
                 <div class="cqduh">
                   <!-- Social icons -->
