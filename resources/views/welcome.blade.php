@@ -61,6 +61,7 @@
             location.reload(); // Reload page to apply changes
         }
     </script>
+    <link rel="shortcut icon" href="https://lalodev.com/images/icon.png" type="image/x-icon">
 </head>
 
 <body class="crok3 cd5fh c0n2d ca1ms ciyl2 cmwzp c7v7z">
